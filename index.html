@@ -16,6 +16,7 @@
 
       <p id="message"></p>
 
+      <!--Song Forms-->
 
       <!-- Create Song Form -->
       <form id="create-song">
@@ -44,6 +45,21 @@
        <input type="text" name="song[title]" id="update-song-title" placeholder="New Title">
        <input type="text" name="song[artist]" id="update-song-artist" placeholder="New Artist">
      </form>
+
+     <!--Artist Forms-->
+
+     <!-- Create Artist Form -->
+     <form id="create-artist">
+       <input type="submit" name="submit" value="New Artist">
+       <input type="text" name="artist[given_name]" id="artist-given-name" placeholder="Artist First Name">
+       <input type="text" name="artist[family_name]" id="artist-family-name" placeholder="Artist Last Name">
+     </form>
+
+     <!-- Show Artist Form -->
+    <form id="show-artists">
+      <input type="submit" name="submit" value="Show Artists">
+    </form>
+
 
       <!-- Authorization -->
       <div class="auth">

@@ -4,9 +4,11 @@ const getFormFields = require(`../../../lib/get-form-fields`)
 const api = require('./api')
 const ui = require('./ui')
 const showDeletedSong = require('../templates/delete-song.handlebars')
+const artistApi = require('../artists/api.js')
 
 const onCreateSong = function (event) {
   const data = getFormFields(this)
+  console.log('song data', data)
   event.preventDefault()
   api.createSong(data)
     .then(ui.createSongSuccess)
@@ -26,7 +28,6 @@ const onDeleteSong = function (event) {
 
   // Show deleted song ID using handlebars
   $('.content').empty()
-  console.log('deleted', data.song)
   const showDeletedHtml = showDeletedSong({ songs: data.song })
   $('.content').append(showDeletedHtml)
 
