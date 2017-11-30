@@ -20,17 +20,26 @@ const onShowSongs = function (event) {
 
 const onDeleteSong = function (event) {
   const data = getFormFields(this)
-  console.log('here is the data:', data)
   event.preventDefault()
   api.deleteSong(data)
     .then(ui.deleteSongSuccess)
     .catch(ui.deleteSongFailiure)
 }
 
+const onUpdateSong = function (event) {
+  const data = getFormFields(this)
+  console.log('here is the data:', data)
+  event.preventDefault()
+  api.updateSong(data)
+    .then(ui.updateSongSuccess)
+    .catch(ui.updateSongFailiure)
+}
+
 const addHandlers = function () {
   $('#create-song').on('submit', onCreateSong)
   $('#show-songs').on('submit', onShowSongs)
   $('#delete-song').on('submit', onDeleteSong)
+  $('#update-song').on('submit', onUpdateSong)
 }
 
 module.exports = {

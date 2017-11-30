@@ -33,9 +33,20 @@ const deleteSong = function (data) {
     data
   })
 }
+const updateSong = function (data) {
+  return $.ajax({
+    url: config.apiOrigin + '/songs/' + data.song.id,
+    method: 'PATCH',
+    headers: {
+      Authorization: 'Token token=' + store.user.token
+    },
+    data
+  })
+}
 
 module.exports = {
   createSong,
   showSongs,
-  deleteSong
+  deleteSong,
+  updateSong
 }
