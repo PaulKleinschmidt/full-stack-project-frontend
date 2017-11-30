@@ -3,7 +3,8 @@
 const setAPIOrigin = require('../../lib/set-api-origin')
 const config = require('./config')
 const events = require('./auth/events')
-const songEvents = require('./songs/events')
+const favoriteEvents = require('./favorites/events')
+const songEvents = require('./main-song-resource/events')
 const artistEvents = require('./artists/events')
 
 $(() => {
@@ -12,8 +13,9 @@ $(() => {
 
 $(() => {
   events.addHandlers()
-  songEvents.addHandlers()
+  favoriteEvents.addHandlers()
   artistEvents.addHandlers()
+  songEvents.addHandlers()
 })
 
 // use require with a reference to bundle the file and use it in this file

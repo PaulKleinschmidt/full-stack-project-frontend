@@ -3,9 +3,9 @@
 const config = require('../config')
 const store = require('../store')
 
-const createSong = function (data) {
+const createFavorite = function (data) {
   return $.ajax({
-    url: config.apiOrigin + '/songs/',
+    url: config.apiOrigin + '/favorites/',
     method: 'POST',
     headers: {
       Authorization: 'Token token=' + store.user.token
@@ -14,9 +14,9 @@ const createSong = function (data) {
   })
 }
 
-const showSongs = function (data) {
+const showFavorites = function (data) {
   return $.ajax({
-    url: config.apiOrigin + '/songs/',
+    url: config.apiOrigin + '/favorites/',
     method: 'GET',
     headers: {
       Authorization: 'Token token=' + store.user.token
@@ -25,9 +25,9 @@ const showSongs = function (data) {
   })
 }
 
-const deleteSong = function (data) {
+const deleteFavorite = function (data) {
   return $.ajax({
-    url: config.apiOrigin + '/songs/' + data.song.id,
+    url: config.apiOrigin + '/favorites/' + data.favorite.id,
     method: 'DELETE',
     headers: {
       Authorization: 'Token token=' + store.user.token
@@ -35,9 +35,9 @@ const deleteSong = function (data) {
     data
   })
 }
-const updateSong = function (data) {
+const updateFavorite = function (data) {
   return $.ajax({
-    url: config.apiOrigin + '/songs/' + data.song.id,
+    url: config.apiOrigin + '/favorites/' + data.favorite.id,
     method: 'PATCH',
     headers: {
       Authorization: 'Token token=' + store.user.token
@@ -47,8 +47,8 @@ const updateSong = function (data) {
 }
 
 module.exports = {
-  createSong,
-  showSongs,
-  deleteSong,
-  updateSong
+  createFavorite,
+  showFavorites,
+  deleteFavorite,
+  updateFavorite
 }

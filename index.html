@@ -16,49 +16,53 @@
 
       <p id="message"></p>
 
-      <!--Song Forms-->
+      <!-- Show All Songs -->
+     <form id="show-songs">
+       <input type="submit" name="submit" value="Show Songs">
+     </form>
 
-      <!-- Create Song Form -->
-      <form id="create-song">
-        <input type="submit" name="submit" value="New Song">
-        <input type="text" name="song[title]" id="song-name" placeholder="Title">
-        <input type="text" name="song[artist]" id="song-artist" placeholder="Artist">
+      <!--favorite Forms-->
+
+      <!-- Create favorite Form -->
+      <form id="create-favorite">
+        <input type="submit" name="submit" value="New favorite">
+        <input type="text" name="favorite[song_id]" id="song-id" placeholder="Song-ID">
       </form>
 
 
-       <!-- Show Song Form -->
-      <form id="show-songs">
-        <input type="submit" name="submit" value="Show Songs">
+       <!-- Show favorite Form -->
+      <form id="show-favorites">
+        <input type="submit" name="submit" value="Show favorites">
       </form>
 
 
-       <!-- Delete Song Form -->
-      <form id="delete-song">
-        <input type="submit" name="submit" value="Delete Song">
-        <input type="number" name="song[id]" id="delete-by-song-id" placeholder="Select By Song ID">
+       <!-- Delete Favorite Form -->
+      <form id="delete-favorite">
+        <input type="submit" name="submit" value="Delete favorite">
+        <input type="number" name="favorite[id]" id="delete-by-favorite-id" placeholder="Select By favorite ID">
       </form>
 
-      <!-- Update Song Form -->
-     <form id="update-song">
-       <input type="submit" name="submit" value="Update Song">
-       <input type="number" name="song[id]" id="select-song-id" placeholder="Select By Song ID">
-       <input type="text" name="song[title]" id="update-song-title" placeholder="New Title">
-       <input type="text" name="song[artist]" id="update-song-artist" placeholder="New Artist">
+      <!-- Update favorite Form -->
+     <form id="update-favorite">
+       <input type="submit" name="submit" value="Update favorite">
+       <input type="number" name="favorite[id]" id="select-favorite-id" placeholder="Select By favorite ID">
+       <input type="text" name="favorite[title]" id="update-favorite-title" placeholder="New Title">
+       <input type="text" name="favorite[artist]" id="update-favorite-artist" placeholder="New Artist">
      </form>
 
      <!--Artist Forms-->
 
      <!-- Create Artist Form -->
-     <form id="create-artist">
+     <!-- <form id="create-artist">
        <input type="submit" name="submit" value="New Artist">
        <input type="text" name="artist[given_name]" id="artist-given-name" placeholder="Artist First Name">
        <input type="text" name="artist[family_name]" id="artist-family-name" placeholder="Artist Last Name">
-     </form>
+     </form> -->
 
      <!-- Show Artist Form -->
-    <form id="show-artists">
+    <!-- <form id="show-artists">
       <input type="submit" name="submit" value="Show Artists">
-    </form>
+    </form> -->
 
 
       <!-- Authorization -->
