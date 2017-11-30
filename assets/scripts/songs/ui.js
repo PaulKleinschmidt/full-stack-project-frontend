@@ -24,7 +24,6 @@ const showSongsFailiure = function (data) {
   $('#message').text('failiure')
 }
 const deleteSongSuccess = function (data) {
-  console.log(data)
   $('#message').text('successfully deleted song')
 }
 const deleteSongFailiure = function (data) {
