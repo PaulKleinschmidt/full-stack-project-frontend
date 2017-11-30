@@ -1,6 +1,8 @@
 const getFormFields = require(`../../../lib/get-form-fields`)
 const api = require('./api')
 const ui = require('./ui')
+const store = require('../store')
+const songsApi = require('../songs/api.js')
 
 const onSignUp = function (event) {
   const data = getFormFields(this)
@@ -13,6 +15,7 @@ const onSignUp = function (event) {
 const onSignIn = function (event) {
   const data = getFormFields(this)
   event.preventDefault()
+  console.log('data' + store.song)
   api.signIn(data)
     .then(ui.signInSuccess)
     .catch(ui.signInFailure)

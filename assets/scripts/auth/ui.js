@@ -1,4 +1,6 @@
 const store = require('../store')
+const api = require('./api.js')
+const events = require('./events.js')
 
 const signUpSuccess = function () {
   $('#message').text('Signed up successfully!')
@@ -11,6 +13,7 @@ const signUpFailure = function () {
 const signInSuccess = function (data) {
   $('#message').text('Signed in Successfully')
   store.user = data.user
+  console.log(store.song)
 }
 
 const signInFailure = function () {

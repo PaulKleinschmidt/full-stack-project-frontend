@@ -12,6 +12,30 @@ const createSong = function (data) {
   })
 }
 
+const showSongs = function (data) {
+  return $.ajax({
+    url: config.apiOrigin + '/songs/',
+    method: 'GET',
+    headers: {
+      Authorization: 'Token token=' + store.user.token
+    },
+    data
+  })
+}
+
+const deleteSong = function (data) {
+  return $.ajax({
+    url: config.apiOrigin + '/songs/' + store.song.id,
+    method: 'DELETE',
+    headers: {
+      Authorization: 'Token token=' + store.user.token
+    },
+    data
+  })
+}
+
 module.exports = {
-  createSong
+  createSong,
+  showSongs,
+  deleteSong
 }

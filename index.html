@@ -16,12 +16,28 @@
 
       <p id="message"></p>
 
+
+      <!-- Create Song Form -->
       <form id="create-song">
         <input type="submit" name="submit" value="New Song">
         <input type="text" name="song[title]" id="song-name" placeholder="Title">
         <input type="text" name="song[artist]" id="song-artist" placeholder="Artist">
       </form>
 
+
+       <!-- Show Song Form -->
+      <form id="show-songs">
+        <input type="submit" name="submit" value="Show Songs">
+      </form>
+
+
+       <!-- Delete Song Form -->
+      <form id="delete-song">
+        <input type="submit" name="submit" value="Delete Song">
+        <input type="text" name="song[title]" id="delete-by-song-name" placeholder="Select By Song Name">
+      </form>
+
+      <!-- Authorization -->
       <div class="auth">
       <form id="sign-up">
         <fieldset>
