@@ -20,6 +20,7 @@ const onShowSongs = function (event) {
 
 const onDeleteSong = function (event) {
   const data = getFormFields(this)
+  console.log('here is the data:', data)
   event.preventDefault()
   api.deleteSong(data)
     .then(ui.deleteSongSuccess)

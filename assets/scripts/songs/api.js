@@ -25,7 +25,7 @@ const showSongs = function (data) {
 
 const deleteSong = function (data) {
   return $.ajax({
-    url: config.apiOrigin + '/songs/' + store.song.id,
+    url: config.apiOrigin + '/songs/' + data.song.id,
     method: 'DELETE',
     headers: {
       Authorization: 'Token token=' + store.user.token

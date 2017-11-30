@@ -16,10 +16,19 @@ const showSongsSuccess = function (data) {
 const showSongsFailiure = function (data) {
   $('#message').text('failiure')
 }
+const deleteSongSuccess = function (data) {
+  console.log(data)
+  $('#message').text('successfully deleted song')
+}
+const deleteSongFailiure = function (data) {
+  $('#message').text('You do not have permission to delete this song')
+}
 
 module.exports = {
   createSongFailiure,
   createSongSuccess,
   showSongsSuccess,
-  showSongsFailiure
+  showSongsFailiure,
+  deleteSongSuccess,
+  deleteSongFailiure
 }
