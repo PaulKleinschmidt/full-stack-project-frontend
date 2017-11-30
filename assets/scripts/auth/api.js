@@ -19,10 +19,10 @@ const signIn = function (data) {
 
 const changePassword = function (data) {
   return $.ajax({
-    url: config.apiOrigin + '/change-password/',
+    url: config.apiOrigin + '/change-password/' + store.user.id,
     method: 'PATCH',
     headers: {
-      Authorization: 'Token token='
+      Authorization: 'Token token=' + store.user.token
     },
     data
   })
