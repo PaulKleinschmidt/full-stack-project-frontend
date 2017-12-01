@@ -19,7 +19,7 @@
 
       <p id="message"></p>
       <div class="row">
-        <div class="col-md-2">
+        <div class="col-md-2 col-md-offset-1 song-forms">
 
 
           <!-- Show All Songs -->
@@ -27,7 +27,7 @@
            <input type="submit" name="submit" value="Show Songs">
          </form>
        </div>
-       <div class="col-md-2">
+       <div class="col-md-2 song-forms">
           <!--favorite Forms-->
           <!-- Create favorite Form -->
           <form id="create-favorite">
@@ -35,7 +35,7 @@
             <input type="text" name="favorite[song_id]" id="song-id" placeholder="Song-ID">
           </form>
         </div>
-        <div class="col-md-2">
+        <div class="col-md-2 song-forms">
 
            <!-- Show favorite Form -->
           <form id="show-favorites">
@@ -43,14 +43,14 @@
           </form>
         </div>
 
-        <div class="col-md-2">
+        <div class="col-md-2 song-forms">
            <!-- Delete Favorite Form -->
           <form id="delete-favorite">
             <input type="submit" name="submit" value="Delete favorite">
             <input type="number" name="favorite[id]" id="delete-by-favorite-id" placeholder="Select By favorite ID">
           </form>
         </div>
-        <div class="col-md-2">
+        <div class="col-md-2 song-forms">
 
           <!-- Update favorite Form -->
          <form id="update-favorite">
@@ -114,7 +114,7 @@
     </div>
 
     <!-- Display Content -->
-    <div id="content" class="containerfluid">
+    <div id="content" class="container-fluid">
     </div>
 
     </body>
