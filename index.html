@@ -14,10 +14,10 @@
     </head>
 
     <body class="container-fluid">
-
+      <div class='song-display'>
       <p id="message"></p>
       <div class="row">
-        <div class="col-md-2 col-md-offset-1 song-forms">
+        <div class="col-xs-2 col-xs-offset-1 song-forms">
 
 
           <!-- Show All Songs -->
@@ -25,7 +25,7 @@
            <input type="submit" name="submit" value="Show Songs" class="dropbtn">
          </form>
        </div>
-       <div class="col-md-2 song-forms">
+       <div class="col-xs-2 song-forms">
           <!--favorite Forms-->
           <!-- Create favorite Form -->
           <form id="create-favorite">
@@ -37,7 +37,7 @@
         </div>
           </form>
         </div>
-        <div class="col-md-2 song-forms">
+        <div class="col-xs-2 song-forms">
 
            <!-- Show favorite Form -->
           <form id="show-favorites">
@@ -45,7 +45,7 @@
           </form>
         </div>
 
-        <div class="col-md-2 song-forms">
+        <div class="col-xs-2 song-forms">
            <!-- Delete Favorite Form -->
           <form id="delete-favorite">
             <div class="dropdown">
@@ -56,7 +56,7 @@
         </div>
           </form>
         </div>
-        <div class="col-md-2 song-forms">
+        <div class="col-xs-2 song-forms">
 
           <!-- Update favorite Form -->
          <form id="update-favorite">
@@ -70,6 +70,7 @@
          </form>
        </div>
        </div>
+     </div>
 
 
   <!-- <button class="dropbtn">Dropdown</button>
@@ -94,7 +95,7 @@
       <input type="submit" name="submit" value="Show Artists">
     </form> -->
 
-
+    <h1 class="title">Favorite Songz</h1>
       <!-- Authorization -->
       <div class="auth">
       <form id="sign-up">
@@ -103,7 +104,8 @@
           <input type="text" id="sign-up-email" name="credentials[email]" placeholder="Email">
           <input type="text" id="sign-up-password" name="credentials[password]" placeholder="Password">
           <input type="text" id="sign-up-password-confirmation" name="credentials[password_confirmation]" placeholder="Password Confirmation">
-          <input type="submit" name="submit" value="Sign up!">
+          <br>
+          <input type="submit" name="submit" value="Sign up" class="dropbtn">
         </fieldset>
       </form>
 
@@ -112,24 +114,29 @@
           <legend>Sign In</legend>
           <input type="text" id="sign-in-email" name="credentials[email]" placeholder="Email">
           <input type="text" id="sign-in-password" name="credentials[password]" placeholder="Password">
-          <input type="submit" name="submit" value="Sign in!">
+          <br>
+          <input type="submit" name="submit" value="Sign in" class="dropbtn">
         </fieldset>
       </form>
+      </div>
 
+      <div class="logged-in-auth">
+        <form id="sign-out">
+          <input type="submit" name="submit" value="Sign Out" class="dropbtn">
+        </form>
 
+        <div class="dropdown">
       <form id="change-password">
-        <legend>Change Password!</legend>
+        <legend></legend>
+        <input type="submit" name="submit" value="Change Password" class="dropbtn">
+        <div class="dropdown-content">
         <input type="text" name="passwords[old]" placeholder="old password">
         <input type="text" name="passwords[new]" placeholder="new password">
-        <input type="submit" name="submit" value="change-password!">
-      </form>
-
-
-      <form id="sign-out">
-        <legend>Sign Out</legend>
-        <input type="submit" name="submit" value="Sign Out">
+      </div>
+      </div>
       </form>
     </div>
+
 
     <!-- Display Content -->
     <div id="content" class="content">

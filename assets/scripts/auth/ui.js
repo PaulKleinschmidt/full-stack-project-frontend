@@ -13,7 +13,11 @@ const signUpFailure = function () {
 const signInSuccess = function (data) {
   $('#message').text('Signed in Successfully')
   store.user = data.user
-  console.log(store.song)
+  $('.song-display').show()
+  $('.auth').hide()
+  $('#sign-out').show()
+  $('#change-password').show()
+  $('.logged-in-auth').show()
 }
 
 const signInFailure = function () {
@@ -30,6 +34,12 @@ const changePasswordSuccess = function (data) {
 
 const signOutSuccess = function () {
   $('#message').text('Signed Out Successfully')
+  $('.auth').show()
+  $('.song-display').hide()
+  $('#change-password').hide()
+  $('#sign-out').hide()
+  $('.logged-in-auth').hide()
+  $('.content').empty()
 }
 
 const signOutFailure = function () {
