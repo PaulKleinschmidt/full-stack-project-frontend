@@ -10,45 +10,57 @@
       <!-- Do not add `script` tags-->
       <script src="public/vendor.js" type="text/javascript" charset="utf-8" defer></script>
       <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
+
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
     </head>
 
     <body class="container-fluid">
 
       <p id="message"></p>
-
-      <!-- Show All Songs -->
-     <form id="show-songs">
-       <input type="submit" name="submit" value="Show Songs">
-     </form>
-
-      <!--favorite Forms-->
-
-      <!-- Create favorite Form -->
-      <form id="create-favorite">
-        <input type="submit" name="submit" value="New favorite">
-        <input type="text" name="favorite[song_id]" id="song-id" placeholder="Song-ID">
-      </form>
+      <div class="row">
+        <div class="col-md-2">
 
 
-       <!-- Show favorite Form -->
-      <form id="show-favorites">
-        <input type="submit" name="submit" value="Show favorites">
-      </form>
+          <!-- Show All Songs -->
+         <form id="show-songs">
+           <input type="submit" name="submit" value="Show Songs">
+         </form>
+       </div>
+       <div class="col-md-2">
+          <!--favorite Forms-->
+          <!-- Create favorite Form -->
+          <form id="create-favorite">
+            <input type="submit" name="submit" value="New favorite">
+            <input type="text" name="favorite[song_id]" id="song-id" placeholder="Song-ID">
+          </form>
+        </div>
+        <div class="col-md-2">
 
+           <!-- Show favorite Form -->
+          <form id="show-favorites">
+            <input type="submit" name="submit" value="Show favorites">
+          </form>
+        </div>
 
-       <!-- Delete Favorite Form -->
-      <form id="delete-favorite">
-        <input type="submit" name="submit" value="Delete favorite">
-        <input type="number" name="favorite[id]" id="delete-by-favorite-id" placeholder="Select By favorite ID">
-      </form>
+        <div class="col-md-2">
+           <!-- Delete Favorite Form -->
+          <form id="delete-favorite">
+            <input type="submit" name="submit" value="Delete favorite">
+            <input type="number" name="favorite[id]" id="delete-by-favorite-id" placeholder="Select By favorite ID">
+          </form>
+        </div>
+        <div class="col-md-2">
 
-      <!-- Update favorite Form -->
-     <form id="update-favorite">
-       <input type="submit" name="submit" value="Update favorite">
-       <input type="number" name="favorite[id]" id="select-favorite-id" placeholder="Select By favorite ID">
-       <input type="text" name="favorite[title]" id="update-favorite-title" placeholder="New Title">
-       <input type="text" name="favorite[artist]" id="update-favorite-artist" placeholder="New Artist">
-     </form>
+          <!-- Update favorite Form -->
+         <form id="update-favorite">
+           <input type="submit" name="submit" value="Update favorite">
+           <input type="number" name="favorite[id]" id="select-favorite-id" placeholder="Select By favorite ID">
+           <input type="text" name="favorite[title]" id="update-favorite-title" placeholder="New Title">
+           <input type="text" name="favorite[artist]" id="update-favorite-artist" placeholder="New Artist">
+         </form>
+       </div>
+       </div>
 
      <!--Artist Forms-->
 
@@ -102,7 +114,7 @@
     </div>
 
     <!-- Display Content -->
-    <div id="content" class="content">
+    <div id="content" class="containerfluid">
     </div>
 
     </body>
