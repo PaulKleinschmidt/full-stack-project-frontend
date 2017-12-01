@@ -1,18 +1,12 @@
 {{#each songs as |song|}}
 
 
-  <ul data-id="{{song.id}}">
-    <h4>Song ID# {{song.id}}</h4>
-  <li>{{#if song.title}}
-    <large>Title: {{song.title}}</large>
-  {{else}}
-    Unknown Title
-  {{/if}}</li>
-    <li>{{#if song.artist}}
-      <large>Artist: {{song.artist}}</large>
-    {{else}}
-      Unknown Artist
-    {{/if}}</li>
-</ul>
+  <div class="show-data" data-id="{{song.id}}">
+    <h2 class="show-title">Title: {{song.title}}</h2>
+
+    <h4 class="show-artist">Artist: {{song.artist}}</h4>
+
+    <h4 class="show-id">song# {{id}}</h4>
+  </div>
 
 {{/each}}

@@ -1,18 +1,12 @@
 {{#each favorites as |favorite|}}
 
 
-  <ul data-id="{{favorite.id}}">
-    <h4>Your Favorite # {{favorite.id}}</h4>
-  <li>{{#if favorite.song.title}}
-    <large>Title: {{favorite.song.title}}</large>
-  {{else}}
-    Unknown Title
-  {{/if}}</li>
-    <li>{{#if favorite.song.artist}}
-      <large>Artist: {{favorite.song.artist}}</large>
-    {{else}}
-      Unknown Artist
-    {{/if}}</li>
-</ul>
+  <div class="show-data" data-id="{{favorite.id}}">
+    <h2 class="show-title">Title: {{favorite.song.title}}</h2>
+
+    <h4 class="show-artist">Artist: {{favorite.song.artist}}</h4>
+
+    <h4 class="show-id">favorite id# {{favorite.id}}</h4>
+  </div>
 
 {{/each}}

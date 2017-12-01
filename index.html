@@ -24,43 +24,64 @@
 
           <!-- Show All Songs -->
          <form id="show-songs">
-           <input type="submit" name="submit" value="Show Songs">
+           <input type="submit" name="submit" value="Show Songs" class="dropbtn">
          </form>
        </div>
        <div class="col-md-2 song-forms">
           <!--favorite Forms-->
           <!-- Create favorite Form -->
           <form id="create-favorite">
-            <input type="submit" name="submit" value="New favorite">
+            <div class="dropdown">
+            <input type="submit" name="submit" value="New favorite" class="dropbtn">
+            <div class="dropdown-content">
             <input type="text" name="favorite[song_id]" id="song-id" placeholder="Song-ID">
+          </div>
+        </div>
           </form>
         </div>
         <div class="col-md-2 song-forms">
 
            <!-- Show favorite Form -->
           <form id="show-favorites">
-            <input type="submit" name="submit" value="Show favorites">
+            <input type="submit" name="submit" value="Show favorites" class="dropbtn">
           </form>
         </div>
 
         <div class="col-md-2 song-forms">
            <!-- Delete Favorite Form -->
           <form id="delete-favorite">
-            <input type="submit" name="submit" value="Delete favorite">
+            <div class="dropdown">
+            <input type="submit" name="submit" value="Delete favorite" class="dropbtn">
+            <div class="dropdown-content">
             <input type="number" name="favorite[id]" id="delete-by-favorite-id" placeholder="Select By favorite ID">
+          </div>
+        </div>
           </form>
         </div>
         <div class="col-md-2 song-forms">
 
           <!-- Update favorite Form -->
          <form id="update-favorite">
-           <input type="submit" name="submit" value="Update favorite">
-           <input type="number" name="favorite[id]" id="select-favorite-id" placeholder="Select By favorite ID">
-           <input type="text" name="favorite[title]" id="update-favorite-title" placeholder="New Title">
-           <input type="text" name="favorite[artist]" id="update-favorite-artist" placeholder="New Artist">
+           <div class="dropdown">
+           <input type="submit" name="submit" value="Update favorite" class="dropbtn">
+            <div class="dropdown-content">
+             <input type="number" name="favorite[id]" id="select-favorite-id" placeholder="Select By favorite ID">
+            <input type="text" name="favorite[title]" id="update-favorite-title" placeholder="New Title">
+            <input type="text" name="favorite[artist]" id="update-favorite-artist" placeholder="New Artist">
+          </div>
+        </div>
          </form>
        </div>
        </div>
+
+
+  <!-- <button class="dropbtn">Dropdown</button>
+  <div class="dropdown-content">
+    <a href="#">Link 1</a>
+    <a href="#">Link 2</a>
+    <a href="#">Link 3</a>
+  </div>
+</div> -->
 
      <!--Artist Forms-->
 
@@ -114,7 +135,7 @@
     </div>
 
     <!-- Display Content -->
-    <div id="content" class="container-fluid">
+    <div id="content" class="content">
     </div>
 
     </body>

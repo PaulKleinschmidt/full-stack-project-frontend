@@ -1,18 +1,11 @@
 {{#each songs as |song|}}
 
 
-  <ul data-id="{{song.id}}">
-    <h4>Your Favorite # {{song.id}} Has Been Updated</h4>
-  <li>{{#if song.title}}
-    <large>Title: {{song.title}}</large>
-  {{else}}
-    Unknown Title
-  {{/if}}</li>
-    <li>{{#if song.artist}}
-      <large>Artist: {{song.artist}}</large>
-    {{else}}
-      Unknown Artist
-    {{/if}}</li>
-</ul>
+  <div class="show-data" data-id="{{song.id}}">
+    <h2>Your Favorite # {{song.id}} Has Been Updated</h2>
+    <h2 class="show-title">Title: {{favorite.song.title}}</h2>
+
+    <h4 class="show-artist">Artist: {{favorite.song.artist}}</h4>
+  </div>
 
 {{/each}}
