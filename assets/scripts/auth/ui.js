@@ -3,37 +3,39 @@ const api = require('./api.js')
 const events = require('./events.js')
 
 const signUpSuccess = function () {
-  $('#message').text('Signed up successfully!')
+  $('#auth-message').text('Signed up Successfully')
+  $('#sign-up')[0].reset()
 }
 
 const signUpFailure = function () {
-  $('#message').text('Error on sign up')
+  $('#auth-message').text('Sign up Failed')
 }
 
 const signInSuccess = function (data) {
-  $('#message').text('Signed in Successfully')
   store.user = data.user
   $('.song-display').show()
   $('.auth').hide()
   $('#sign-out').show()
   $('#change-password').show()
   $('.logged-in-auth').show()
+  $('#sign-in')[0].reset()
+  $('#sign-up')[0].reset()
+  $('#auth-message').empty()
 }
 
 const signInFailure = function () {
-  $('#message').text('sign in failed')
+  $('#auth-message').text('Sign in failed')
 }
 
 const changePasswordFailure = function () {
-  $('#message').text('password change failed')
+  $('#message').text('Cannot change Password')
 }
 
 const changePasswordSuccess = function (data) {
-  $('#message').text('password change successful')
+  $('#message').text('Password changed')
 }
 
 const signOutSuccess = function () {
-  $('#message').text('Signed Out Successfully')
   $('.auth').show()
   $('.song-display').hide()
   $('#change-password').hide()

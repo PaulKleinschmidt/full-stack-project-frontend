@@ -3,14 +3,17 @@ $icon-font-path: '~bootstrap-sass/assets/fonts/bootstrap/';
 
 body {
   background-color: #ededed;
-  font-family: arial;
+  font-family: 'Work Sans', sans-serif;
+  padding: 0;
+  margin: 0;
 }
 .row {
   margin: 0 auto;
   text-align: center;
   height: 100px;
   background-color: white;
-  border: 5px solid #47d1ae;
+  border-top: 5px solid #47d1ae;
+  border-bottom: 5px solid #47d1ae;
   box-shadow: 10px 8px 50px 0px rgba(5,5,5,0.1);
 }
 
@@ -23,6 +26,16 @@ body {
   margin-top: 50px;
   text-shadow: 5px 5px 10px rgba(0,0,0,0.1);
   clear: both;
+
+}
+
+#auth-message {
+  float: right;
+  margin: 0 auto;
+  overflow: auto;
+  color: rgba(255,0,0,0.9);
+  clear: both;
+  position: absolute;
 
 }
 
@@ -61,6 +74,7 @@ body {
 
 }
 
+// dropdown css
 .dropbtn {
   color: black;
   padding: 5px;
@@ -71,13 +85,11 @@ body {
   margin: 7px;
 }
 
-/* The container <div> - needed to position the dropdown content */
 .dropdown {
   display: inline-block;
   position: relative;
 }
 
-/* Dropdown Content (Hidden by Default) */
 .dropdown-content {
   display: none;
   position: absolute;
@@ -86,7 +98,7 @@ body {
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
   z-index: 1;
 }
-/* Links inside the dropdown */
+
 .dropdown-content input {
     color: black;
     padding: 12px 16px;
@@ -94,15 +106,14 @@ body {
     display: block;
 }
 
-/* Change color of dropdown links on hover */
+
 .dropdown-content input:hover {background-color: #ededed}
 
-/* Show the dropdown menu on hover */
+
 .dropdown:hover .dropdown-content {
     display: block;
 }
 
-/* Change the background color of the dropdown button when the dropdown content is shown */
 .dropdown:hover .dropbtn {
     background-color: #ededed;
 }

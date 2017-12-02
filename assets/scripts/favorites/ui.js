@@ -21,25 +21,41 @@ const showFavoritesSuccess = function (data) {
   const showFavoritesHtml = showFavorites({ favorites: data.favorites })
   $('.content').append(showFavoritesHtml)
 }
+
 const showFavoritesFailiure = function (data) {
   $('#message').text('failiure')
 }
+
 const deleteFavoriteSuccess = function (data) {
   $('#message').text('successfully deleted favorite')
+
+  // clear forms
+  $('#delete-favorite')[0].reset()
 }
+
 const deleteFavoriteFailiure = function (data) {
   $('#message').text('You do not have permission to delete this favorite')
+
+  // clear forms
+  $('#delete-favorite')[0].reset()
 }
+
 const updateFavoriteSuccess = function (data) {
   $('#message').text('successfully updated favorite')
   $('.content').empty()
+
+  // clear forms
+  $('#update-favorite')[0].reset()
 
   // Show updated favorite using handlebars
   const showUpdatedFavoriteHtml = showUpdatedFavorite({ favorites: data })
   $('.content').append(showUpdatedFavoriteHtml)
 }
+
 const updateFavoriteFailiure = function (data) {
   $('#message').text('You do not have permission to update this favorite')
+  // clear forms
+  $('#update-favorite')[0].reset()
 }
 
 module.exports = {
