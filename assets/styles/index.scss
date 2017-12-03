@@ -4,17 +4,37 @@ $icon-font-path: '~bootstrap-sass/assets/fonts/bootstrap/';
 body {
   background-color: #ededed;
   font-family: 'Work Sans', sans-serif;
-  padding: 0;
-  margin: 0;
 }
-.row {
+.row-fluid {
+  margin: 0 auto;
+  width: 100%;
+  padding-left: 0px;
   margin: 0 auto;
   text-align: center;
   height: 100px;
   background-color: white;
-  border-top: 5px solid #47d1ae;
-  border-bottom: 5px solid #47d1ae;
-  box-shadow: 10px 8px 50px 0px rgba(5,5,5,0.1);
+  border-top: .2px solid #700E8C;
+  border-left: .1px solid #700E8C;
+  border-right: .1px solid #700E8C;
+}
+.row-fluid-2 {
+  margin: 0 auto;
+  width: 100%;
+  padding-left: 0px;
+  margin: 0 auto;
+  text-align: center;
+  height: 100px;
+  background-color: white;
+  border-bottom: .2px solid #700E8C;
+  border-left: .1px solid #700E8C;
+  border-right: .1px solid #700E8C;
+}
+
+#search-songs {
+  position: absolute;
+  text-align: center;
+  margin: 0 auto;
+  width: 75%
 }
 
 .song-forms {
@@ -24,9 +44,11 @@ body {
 .title {
   text-align: center;
   margin-top: 50px;
-  text-shadow: 5px 5px 10px rgba(0,0,0,0.1);
+  text-shadow: 5px 5px 10px rgba(112,14,140,.2);
   clear: both;
-
+  font-family: 'The Girl Next Door', cursive;
+  float: left;
+  clear:both;
 }
 
 #auth-message {
@@ -68,9 +90,9 @@ body {
   margin-top: 100px;
   padding: 25px;
   background-color: white;
-  border-top: 8px solid #47d1ae;
-  border-bottom: 8px solid #47d1ae;
-  box-shadow: 10px 8px 50px 0px rgba(5,5,5,0.1);
+  border-top: .2px solid #700E8C;
+  border-bottom: .2px solid #700E8C;
+  box-shadow: 10px 10px 50px 0px rgba(112,14,140,.2);
 
 }
 

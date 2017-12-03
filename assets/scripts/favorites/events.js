@@ -4,6 +4,7 @@ const getFormFields = require(`../../../lib/get-form-fields`)
 const api = require('./api')
 const ui = require('./ui')
 const showDeletedFavorite = require('../templates/delete-favorite.handlebars')
+const songHandlebars = require('../templates/song-listing.handlebars')
 
 const onCreateFavorite = function (event) {
   const data = getFormFields(this)
@@ -50,6 +51,7 @@ const addHandlers = function () {
   $('#show-favorites').on('submit', onShowFavorites)
   $('#delete-favorite').on('submit', onDeleteFavorite)
   $('#update-favorite').on('submit', onUpdateFavorite)
+  $(document.body).on("submit", "#create-favorite", onCreateFavorite)
 }
 
 module.exports = {
