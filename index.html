@@ -23,7 +23,7 @@
 
           <!-- Show All Songs -->
          <form id="show-songs">
-           <input type="submit" name="submit" value="Show Songs" class="dropbtn">
+           <input type="submit" name="song[title]" value="Show All Songs" class="dropbtn">
          </form>
        </div>
        <div class="col-xs-2 song-forms">
@@ -70,6 +70,14 @@
         </div>
          </form>
        </div>
+       </div>
+       <div class="row">
+         <div class="col-xs-12 song-forms">
+            <form id="search-songs">
+              <input type="text" name="song[title]" id="song-title" placeholder="Search by Title">
+              <input type="submit" name="submit" value="Search Songs" class="dropbtn">
+            </form>
+         </div>
        </div>
      </div>
 
