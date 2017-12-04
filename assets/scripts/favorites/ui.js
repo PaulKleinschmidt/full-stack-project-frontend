@@ -19,7 +19,7 @@ const createFavoriteFailiure = function (data) {
 
 const showFavoritesSuccess = function (data) {
   console.log(data)
-  $('#message').text('success')
+  $('#message').text('Favorites:')
   $('.content').empty()
 
   // Show favorites using handlebars
@@ -32,14 +32,14 @@ const showFavoritesFailiure = function (data) {
 }
 
 const deleteFavoriteSuccess = function (data) {
-  $('#message').text('successfully deleted favorite')
-
+  $('#message').empty()
   // clear forms
   $('#delete-favorite')[0].reset()
 }
 
 const deleteFavoriteFailiure = function (data) {
   $('#message').text('You do not have permission to delete this favorite')
+  $('.content').empty()
 
   // clear forms
   $('#delete-favorite')[0].reset()

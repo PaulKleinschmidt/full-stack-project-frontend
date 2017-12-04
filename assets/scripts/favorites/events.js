@@ -39,7 +39,6 @@ const onDeleteFavorite = function (event) {
 
 const onUpdateFavorite = function (event) {
   const data = getFormFields(this)
-  console.log('here is the data:', data)
   event.preventDefault()
   api.updateFavorite(data)
     .then(ui.updateFavoriteSuccess)

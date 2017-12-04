@@ -6,11 +6,10 @@
 
     <h4 class="show-artist">by: {{song.artist}}</h4>
 
-    <h5 class="show-id">Use song ID# {{id}} to add to your favorites</h5>
-
+    <h5 class="show-id">Song ID# {{id}}</h5>
 
     <form id="create-favorite">
-      <input type="submit" name="Add To Favorites" value="Add To Favorites" class="dropbtn">
+      <input type="submit" name="Add To Favorites" value="Favorite" class="favorite-button">
       <input type="text" name="favorite[song_id]" value="{{song.id}}" id="song-id" placeholder="Song-ID" style="display: none">
     </form>
 

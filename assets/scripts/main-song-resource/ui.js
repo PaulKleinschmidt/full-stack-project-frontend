@@ -11,7 +11,7 @@ const events = require('./events')
 // }
 
 const showSongsSuccess = function (data) {
-  $('#message').text('success')
+  $('#message').text('All songs:')
   $('.content').empty()
   console.log(data)
 

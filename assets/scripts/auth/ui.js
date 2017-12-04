@@ -42,6 +42,7 @@ const signOutSuccess = function () {
   $('#sign-out').hide()
   $('.logged-in-auth').hide()
   $('.content').empty()
+  $('#message').empty()
 }
 
 const signOutFailure = function () {

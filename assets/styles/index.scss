@@ -61,6 +61,17 @@ body {
 
 }
 
+#message {
+  margin: 0 auto;
+  overflow: auto;
+  color: rgba(255,0,0,0.9);
+  clear: both;
+  position: absolute;
+  font-size: 20px;
+}
+
+
+
 .song-display {
   display: none;
 }
@@ -96,6 +107,16 @@ body {
 
 }
 
+.favorite-button {
+  color: black;
+  padding: 5px;
+  font-size: 15px;
+  box-shadow: 1px 1px 1px 1px rgba(100,100,0,0.1);
+  border: none;
+  margin: 7px;
+  background-color: yellow;
+}
+
 // dropdown css
 .dropbtn {
   color: black;
@@ -103,7 +124,6 @@ body {
   font-size: 15px;
   box-shadow: 1px 1px 1px 1px rgba(0,0,0,0.1);
   border: none;
-  cursor: pointer;
   margin: 7px;
 }
 
