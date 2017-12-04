@@ -1,6 +1,4 @@
 const store = require('../store')
-const api = require('./api.js')
-const events = require('./events.js')
 
 const signUpSuccess = function () {
   $('#auth-message').text('Signed up Successfully')

@@ -6,7 +6,6 @@ const showSongs = require('../templates/song-listing.handlebars')
 
 const createFavoriteSuccess = function (data) {
   $('#message').text('new favorite made')
-  console.log('data boi', data.favorite.song.title)
   // const showFavoriteHtml = showCreatedFavorite ({ favorites: data })
   const showSongsHtml = showSongs({ songs: data.songs, favorite: data.favorite.song.title })
   $('.content').append(showSongsHtml)
@@ -14,11 +13,9 @@ const createFavoriteSuccess = function (data) {
 
 const createFavoriteFailiure = function (data) {
   $('#message').text('failed')
-  console.log('favorite data', data)
 }
 
 const showFavoritesSuccess = function (data) {
-  console.log(data)
   $('#message').text('Favorites:')
   $('.content').empty()
 
