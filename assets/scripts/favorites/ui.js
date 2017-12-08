@@ -4,8 +4,18 @@ const showFavorites = require('../templates/favorite-listing.handlebars')
 const showUpdatedFavorite = require('../templates/update-favorite.handlebars')
 const showSongs = require('../templates/song-listing.handlebars')
 
+const checkFavorites = function (data) {
+  console.log('favorites data', data)
+  if (data.favorites.length === 0) {
+    $('#show-favorites').hide()
+  } else {
+    $('#show-favorites').show()
+  }
+}
+
 const createFavoriteSuccess = function (data) {
   $('#message').text('new favorite made')
+  $('#show-favorites').show()
   // const showFavoriteHtml = showCreatedFavorite ({ favorites: data })
   const showSongsHtml = showSongs({ songs: data.songs, favorite: data.favorite.song.title })
   $('.content').append(showSongsHtml)
@@ -16,8 +26,8 @@ const createFavoriteFailiure = function (data) {
 }
 
 const showFavoritesSuccess = function (data) {
-  $('#message').text('Favorites:')
   $('.content').empty()
+  $('#message').text('Favorites:')
 
   // Show favorites using handlebars
   const showFavoritesHtml = showFavorites({ favorites: data.favorites })
@@ -68,5 +78,6 @@ module.exports = {
   deleteFavoriteSuccess,
   deleteFavoriteFailiure,
   updateFavoriteSuccess,
-  updateFavoriteFailiure
+  updateFavoriteFailiure,
+  checkFavorites
 }

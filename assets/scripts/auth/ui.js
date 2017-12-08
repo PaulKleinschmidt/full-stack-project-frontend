@@ -1,4 +1,6 @@
 const store = require('../store')
+const favoritesApi = require('../favorites/api.js')
+const favoritesUi = require('../favorites/ui.js')
 
 const signUpSuccess = function () {
   $('#auth-message').text('Signed up Successfully')
@@ -19,6 +21,9 @@ const signInSuccess = function (data) {
   $('#sign-in')[0].reset()
   $('#sign-up')[0].reset()
   $('#auth-message').empty()
+  favoritesApi.showFavorites(data)
+    .then(favoritesUi.checkFavorites)
+    .catch(console.error())
 }
 
 const signInFailure = function () {

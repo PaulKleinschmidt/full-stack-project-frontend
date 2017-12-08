@@ -10,7 +10,6 @@ const createArtistFailiure = function (data) {
 }
 
 const showArtistsSuccess = function (data) {
-  (data)
   $('#message').text('success')
 }
 const showArtistsFailiure = function (data) {
