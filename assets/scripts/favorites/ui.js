@@ -3,6 +3,7 @@
 const showFavorites = require('../templates/favorite-listing.handlebars')
 const showUpdatedFavorite = require('../templates/update-favorite.handlebars')
 const showSongs = require('../templates/song-listing.handlebars')
+const favoritesApi = require('./api.js')
 
 let userFavorites = 0
 
@@ -22,10 +23,12 @@ const displayFavoriteForms = function () {
     $('#show-favorites').hide()
     $('#update-favorite').hide()
     $('#delete-favorite').hide()
+    // $('#message').text('Search Songs to Add them to your Favorites!')
   } else {
     $('#show-favorites').show()
     $('#update-favorite').show()
     $('#delete-favorite').show()
+    // $('#message').text('Favorites:')
   }
 }
 
@@ -44,8 +47,9 @@ const createFavoriteFailiure = function (data) {
 }
 
 const showFavoritesSuccess = function (data) {
+  $('#message').empty()
   $('.content').empty()
-  $('#message').text('Favorites:')
+  displayFavoriteForms()
 
   // Show favorites using handlebars
   const showFavoritesHtml = showFavorites({ favorites: data.favorites })
@@ -59,16 +63,20 @@ const showFavoritesFailiure = function (data) {
 const deleteFavoriteSuccess = function (data) {
   $('#message').empty()
   // clear forms
-  $('#delete-favorite')[0].reset()
+  // $('#delete-favorite')[0].reset()
   checkFavorites()
+
+  favoritesApi.showFavorites()
+    .then(showFavoritesSuccess)
+    .catch(console.error())
 }
 
 const deleteFavoriteFailiure = function (data) {
-  $('#message').text('You do not have permission to delete this favorite')
+  // $('#message').text('You do not have permission to delete this favorite')
   $('.content').empty()
 
   // clear forms
-  $('#delete-favorite')[0].reset()
+  // $('#delete-favorite')[0].reset()
 }
 
 const updateFavoriteSuccess = function (data) {

@@ -7,6 +7,13 @@
     <h4 class="show-artist">Artist: {{favorite.song.artist}}</h4>
 
     <h4 class="show-id">favorite id# {{favorite.id}}</h4>
+
+    <form id="delete-favorite">
+      <div class="dropdown">
+      <input type="submit" name="submit" value="Delete favorite" class="delete-button">
+      <input type="number" name="favorite[id]" id="delete-by-favorite-id" value="{{favorite.id}}" style="display: none">
+  </div>
+    </form>
   </div>
 
 {{/each}}

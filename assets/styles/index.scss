@@ -117,6 +117,16 @@ body {
   background-color: yellow;
 }
 
+.delete-button {
+  color: black;
+  padding: 5px;
+  font-size: 15px;
+  box-shadow: 1px 1px 1px 1px rgba(100,100,0,0.1);
+  border: none;
+  margin: 7px;
+  background-color: red;
+}
+
 // dropdown css
 .dropbtn {
   color: black;

@@ -26,8 +26,8 @@ const onDeleteFavorite = function (event) {
 
   // Show deleted favorite ID using handlebars
   $('.content').empty()
-  const showDeletedHtml = showDeletedFavorite({ favorites: data.favorite })
-  $('.content').append(showDeletedHtml)
+  // const showDeletedHtml = showDeletedFavorite({ favorites: data.favorite })
+  // $('.content').append(showDeletedHtml)
 
   event.preventDefault()
   api.deleteFavorite(data)
@@ -46,9 +46,10 @@ const onUpdateFavorite = function (event) {
 const addHandlers = function () {
   $('#create-favorite').on('submit', onCreateFavorite)
   $('#show-favorites').on('submit', onShowFavorites)
-  $('#delete-favorite').on('submit', onDeleteFavorite)
+  // $('#delete-favorite').on('submit', onDeleteFavorite)
   $('#update-favorite').on('submit', onUpdateFavorite)
   $(document.body).on('submit', '#create-favorite', onCreateFavorite)
+  $(document.body).on('submit', '#delete-favorite', onDeleteFavorite)
 }
 
 module.exports = {
