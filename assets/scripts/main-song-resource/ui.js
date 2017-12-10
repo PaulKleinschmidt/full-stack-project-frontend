@@ -17,5 +17,4 @@ const showSongsFailiure = function (data) {
 module.exports = {
   showSongsSuccess,
   showSongsFailiure
-  // songData
 }

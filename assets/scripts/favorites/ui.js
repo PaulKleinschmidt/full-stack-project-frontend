@@ -4,16 +4,34 @@ const showFavorites = require('../templates/favorite-listing.handlebars')
 const showUpdatedFavorite = require('../templates/update-favorite.handlebars')
 const showSongs = require('../templates/song-listing.handlebars')
 
+let userFavorites = 0
+
 const checkFavorites = function (data) {
-  console.log('favorites data', data)
-  if (data.favorites.length === 0) {
+  if (data === undefined) {
+    userFavorites -= 1
+    console.log('number of', userFavorites)
+  } else {
+    userFavorites = data.favorites.length
+    console.log('number of new', userFavorites)
+  }
+  displayFavoriteForms()
+}
+
+const displayFavoriteForms = function () {
+  if (userFavorites === 0) {
     $('#show-favorites').hide()
+    $('#update-favorite').hide()
+    $('#delete-favorite').hide()
   } else {
     $('#show-favorites').show()
+    $('#update-favorite').show()
+    $('#delete-favorite').show()
   }
 }
 
 const createFavoriteSuccess = function (data) {
+  userFavorites += 1
+  displayFavoriteForms()
   $('#message').text('new favorite made')
   $('#show-favorites').show()
   // const showFavoriteHtml = showCreatedFavorite ({ favorites: data })
@@ -42,6 +60,7 @@ const deleteFavoriteSuccess = function (data) {
   $('#message').empty()
   // clear forms
   $('#delete-favorite')[0].reset()
+  checkFavorites()
 }
 
 const deleteFavoriteFailiure = function (data) {
