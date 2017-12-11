@@ -34,7 +34,7 @@ body {
   position: absolute;
   text-align: center;
   margin: 0 auto;
-  width: 75%
+  width: 75%;
 }
 
 .song-forms {
@@ -46,7 +46,7 @@ body {
   margin-top: 50px;
   text-shadow: 5px 5px 10px rgba(112,14,140,.2);
   clear: both;
-  font-family: 'The Girl Next Door', cursive;
+  font-family: 'The Girl Next Door';
   float: left;
   clear:both;
 }
@@ -62,12 +62,13 @@ body {
 }
 
 #message {
-  margin: 0 auto;
-  overflow: auto;
+  // overflow: auto;
   color: rgba(255,0,0,0.9);
   clear: both;
   position: absolute;
   font-size: 20px;
+  margin-top: 30px;
+  margin-bottom: 30px;
 }
 
 
@@ -78,6 +79,7 @@ body {
 
 .show-data {
   padding: 30px;
+  padding-top: 40px;
 }
 
 #sign-out {
@@ -92,6 +94,7 @@ body {
   max-width: 250px;
   padding: 30px;
   display: none;
+  float: right;
 }
 
 .auth {

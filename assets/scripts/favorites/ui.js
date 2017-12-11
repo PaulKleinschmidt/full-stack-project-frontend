@@ -23,12 +23,11 @@ const displayFavoriteForms = function () {
     $('#show-favorites').hide()
     $('#update-favorite').hide()
     $('#delete-favorite').hide()
-    // $('#message').text('Search Songs to Add them to your Favorites!')
+    $('#message').text('Search Songs To Add To Your Favorites!')
   } else {
     $('#show-favorites').show()
     $('#update-favorite').show()
     $('#delete-favorite').show()
-    // $('#message').text('Favorites:')
   }
 }
 
@@ -48,6 +47,7 @@ const createFavoriteFailiure = function (data) {
 
 const showFavoritesSuccess = function (data) {
   $('#message').empty()
+  $('#message').text('Favorites:')
   $('.content').empty()
   displayFavoriteForms()
 
