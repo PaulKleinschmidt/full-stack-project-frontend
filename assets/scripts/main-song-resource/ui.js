@@ -2,7 +2,7 @@
 const showSongs = require('../templates/song-listing.handlebars')
 
 const showSongsSuccess = function (data) {
-  $('#message').text('All songs:')
+  $('#message').text('Songs:')
   $('.content').empty()
 
   // Show songs using handlebars
