@@ -10,10 +10,8 @@ let userFavorites = 0
 const checkFavorites = function (data) {
   if (data === undefined) {
     userFavorites -= 1
-    console.log('number of', userFavorites)
   } else {
     userFavorites = data.favorites.length
-    console.log('number of new', userFavorites)
   }
   displayFavoriteForms()
 }
